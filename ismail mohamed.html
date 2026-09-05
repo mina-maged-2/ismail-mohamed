@@ -132,6 +132,20 @@
             border: 2px solid var(--gold-primary);
         }
 
+        /* Highlighted Feature Button */
+        .btn-highlight {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: #f8fafc;
+            border: 1px solid var(--gold-primary);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-highlight i {
+            color: var(--gold-primary);
+        }
+
         /* Direct Contact Grid */
         .action-grid {
             display: grid;
@@ -194,7 +208,7 @@
         </div>
 
         <div class="profile">
-            <img src="https://ahramplastic.com/wp-content/uploads/2026/02/ahramplastic_img-768x576.png" alt="Ismail Mohamed" class="avatar">
+            <img src="https://ahramplastic.com/wp-content/uploads/2026/02/ahramplastic_img-768x576.png" alt="Esmael Mohamed" class="avatar">
             <h1 class="name">Ismail Mohamed</h1>
             <p class="title">Purchasing Director</p>
         </div>
@@ -208,13 +222,17 @@
                 <i class="fa-solid fa-file-pdf"></i> View Product Catalog
             </a>
 
+            <a href="https://maps.app.goo.gl/pbsaNYLEP9VZ75um6?g_st=aw" target="_blank" class="btn btn-highlight">
+                <i class="fa-solid fa-map-location-dot"></i> Factory Location
+            </a>
+
             <button class="btn btn-primary" onclick="downloadVCard()">
                 <i class="fa-solid fa-user-plus"></i> Save Contact
             </button>
         </div>
 
         <div class="action-grid">
-            <a href="https://wa.me/201275377779?text=Hi,%20I'd%20like%20to%20get%20in%20touch." class="action-card" target="_blank">
+            <a href="https://wa.me/201032869022?text=Hi,%20I'd%20like%20to%20get%20in%20touch." class="action-card" target="_blank">
                 <i class="fa-brands fa-whatsapp action-icon"></i>
                 <div class="action-text">
                     <span class="action-label">WhatsApp</span>
@@ -222,7 +240,7 @@
                 </div>
             </a>
 
-            <a href="tel:+201275377779" class="action-card">
+            <a href="tel:+201032869022" class="action-card">
                 <i class="fa-solid fa-phone action-icon"></i>
                 <div class="action-text">
                     <span class="action-label">Call</span>
@@ -257,12 +275,13 @@
             const vcardData = `BEGIN:VCARD
 VERSION:3.0
 N:Mohamed;Ismail;;;
-FN:Ismail Mohamed
+FN:Esmael Mohamed
 TITLE:Purchasing Director
 ORG:Al-Ahram Group
-TEL;TYPE=CELL:+201275377779
+TEL;TYPE=CELL:+201032869022
 EMAIL:esmail.mohamed@ahramplastic.com
 URL:https://ahramplastic.com/
+URL;TYPE=Location:https://maps.app.goo.gl/pbsaNYLEP9VZ75um6?g_st=aw
 END:VCARD`;
 
             const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
